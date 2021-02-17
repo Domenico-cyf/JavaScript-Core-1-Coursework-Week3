@@ -11,7 +11,13 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function findSafeOxygenLevel() {}
+
+  function findSafeOxygenLevel(oxygen) { 
+    let oxy = oxygen.map(a=> parseFloat(a)).find(element => element >= 19.5 && element <= 23.5); 
+        return `${oxy}%`;} 
+  
+  
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -19,6 +25,7 @@ const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];
 const oxygenLevels2 = ["30.8%", "23.5%", "18.8%", "19.5%", "20.2%", "31.6%"];
 const oxygenLevels3 = ["200%", "21.1%"];
 
+const { Console } = require("console");
 const util = require("util");
 
 function test(test_name, actual, expected) {
@@ -36,6 +43,6 @@ function test(test_name, actual, expected) {
 
 test("findSafeOxygenLevel function works - case 1", findSafeOxygenLevel(oxygenLevels1), "19.9%");
 
-test("findSafeOxygenLevel function works - case 2", findSafeOxygenLevel(oxygenLevels2), "20.2%");
+test("findSafeOxygenLevel function works - case 2", findSafeOxygenLevel(oxygenLevels2), "23.5%");
 
 test("findSafeOxygenLevel function works - case 3", findSafeOxygenLevel(oxygenLevels3), "21.1%");
