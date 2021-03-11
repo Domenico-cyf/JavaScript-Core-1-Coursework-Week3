@@ -24,8 +24,36 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
+// function validatePasswords(passwords) {
+// const acceptedPassword = passwords.map(
+// (pass, index) =>
+// containsUppercaseLetter(pass) &&
+// containsLowercaseLetter(pass) &&
+// containsNumber(pass) &&
+// containsSymbol(pass) &&
+// 
+// );
+// return acceptedPassword;
+// } 
+
 function validatePasswords(passwords) {
+ var  newPasswords = passwords;
+ let newerPasswords = newPasswords.map((singlePassword, index) => (singlePassword.length >= 5) && 
+                                        containsUppercaseLetter(singlePassword) && 
+                                        containsLowercaseLetter(singlePassword) && 
+                                        containsNumber(singlePassword) && 
+                                        containsSymbol(singlePassword) &&
+                                        //notUsedBefore(singlePassword) &&
+                                        passwords.indexOf(singlePassword) === index &&
+                                        singlePassword.length >= 5);
+return newerPasswords;
 }
+
+// //Checks previous passwords
+// function notUsedBefore(string) {   
+// //return string.indexOf(string) !== -1;
+// return /[newPaswords]/.test(string);
+//}
 
 // Returns true if string contains at least one uppercase letter.
 function containsUppercaseLetter(string) {

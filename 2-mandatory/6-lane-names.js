@@ -6,7 +6,18 @@
   HINT: string and array methods that could be helpful (indexOf, filter)
 */
 
-function getLanes() {}
+// function getLanes(streetNames) {
+//   var search = "Lane";
+//   let newArr = streetNames.filter(word => word.includes(search)) ;
+// return newArr;
+// }
+
+function getLanes(streetNames) {
+  let newArr = streetNames.filter(word => (word.indexOf("Lane") > -1 ));
+  return newArr;
+}
+  
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -37,3 +48,6 @@ test("getLanes function works", getLanes(streetNames), [
   "Abchurch Lane",
   "Addle Lane",
 ]);
+
+
+

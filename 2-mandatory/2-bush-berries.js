@@ -21,7 +21,25 @@
   Let's first look at an example that will teach you how to use these methods.
 */
 
-function isBushSafe() {}
+function isBushSafe(berryArr) {
+ if (berryArr.some(berry => berry !== "pink")) {
+   return "Toxic! Leave bush alone!";
+  } else {return "Bush is safe to eat from";}
+}
+
+// {
+//   if (array.every(lm => lm === "pink")){
+//     return "Bush is safe to eat from";
+//   } else {
+//     return "Toxic! Leave bush alone!";
+
+// function forEachCallbackFn(element) {
+//     console.log("Method 1: " + element)
+// }
+
+// fruits.forEach(forEachCallbackFn);
+
+// let isBushSafe = arr => arr.every(berry => berry === 'pink') ? 'Bush is safe to eat from' : 'Toxic! Leave bush alone!';
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

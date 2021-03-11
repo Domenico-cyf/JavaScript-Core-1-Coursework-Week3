@@ -4,6 +4,24 @@
 var numbers = [0.1, 0.2, 0.3, 0.4, 0.5];
 
 
+var NewNewArr = numbers.map(singNum => singNum * 101);
+console.log(NewNewArr);
+
+ function multiplied(num) {
+   return (num * 102);
+};
+
+NewNewArr2 = numbers.map(multiplied);
+console.log(NewNewArr2);
+
+
+
+
+
+
+
+
+
 
 
 var mulByHundredCaseOne = numbers.map(function mul(num) {

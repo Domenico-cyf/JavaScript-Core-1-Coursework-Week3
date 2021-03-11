@@ -15,7 +15,9 @@
   
 */
 
-function getSettlers() {}
+function getSettlers(voyagers) {
+  voyagers.filter()
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
