@@ -21,21 +21,17 @@
   Let's first look at an example that will teach you how to use these methods.
 */
 
+
+
+
+
 function isBushSafe(berryArr) {
-  for( i=0; i<berryArr.length; i+=1){
- if (berryArr[i] == "pink") {
-   
-  return "Toxic! Leave bush alone!";
-  } else {return "Bush is safe to eat from";}
+  if (berryArr.some((berry) => berry !== "pink")) {
+    return "Toxic! Leave bush alone!";
+  } else {
+    return "Bush is safe to eat from";
+  }
 }
-}
-// function isBushSafe(berryArr) {
-//   if (berryArr.some((berry) => berry !== "pink")) {
-//     return "Toxic! Leave bush alone!";
-//   } else {
-//     return "Bush is safe to eat from";
-//   }
-// }
 
 // {
 //   if (array.every(lm => lm === "pink")){
